@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./2048.js" defer></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        html {
+            font-family: 'pingfang SC', 'helvetica neue', arial, 'hiragino sans gb', 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;
+        }
+
+        body * {
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .bg-game {
+            width: 300px;
+            height: 300px;
+            border: solid 3px #B3A497;
+            margin: auto;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        #game-grid {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #game-grid>div,
+        #items>div {
+            width: 69px;
+            height: 69px;
+            line-height: 69px;
+            background: #C7B9AC;
+            border: solid 3px #B3A497;
+        }
+
+        #restart {
+            margin-top: 50px;
+            pointer-events: auto;
+        }
+
+        #items {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #items>div {
+            position: absolute;
+            border: none;
+            margin: 3px;
+            font-size: 40px;
+            text-align: center;
+            color: #f9f6f2;
+        }
+
+        #items>div.tile-2 {
+            color: #6D645B;
+            background: #eee4da;
+        }
+
+        #items>div.tile-4 {
+            color: #6D645B;
+            background: #ede0c8;
+        }
+
+        #items>div.tile-8 {
+            background: #f2b179;
+        }
+
+        #items>div.tile-16 {
+            background: #f59563;
+        }
+
+        #items>div.tile-32 {
+            background: #f67c5f;
+        }
+
+        #items>div.tile-64 {
+            background: #f65e3b;
+        }
+
+        #items>div.tile-128 {
+            font-size: 36px;
+            background: #edcf72;
+        }
+
+        #items>div.tile-256 {
+            font-size: 36px;
+            background: #edcc61;
+        }
+
+        #items>div.tile-512 {
+            font-size: 36px;
+            background: #edc850;
+        }
+
+        #items>div.tile-1024 {
+            font-size: 28px;
+            background: #edc53f;
+        }
+
+        #items>div.tile-2048 {
+            font-size: 28px;
+            background: #edc22e;
+        }
+
+        #items>div.tile-large {
+            font-size: 24px;
+            background: #3c3a32;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-game">
+        <div id="game-grid"></div>
+        <div id="items"></div>
+    </div>
+
+    <input id="restart" type="button" value="Restart" />
+</body>
+
+</html>
